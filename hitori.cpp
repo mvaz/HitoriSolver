@@ -53,11 +53,16 @@ void Matrix::print() {
 
 int main() {
 
-	Cell zbr( 1, 3);
-	zbr.print();
+	Cell c( 1, 3);
+	c.print();
 	
-	Matrix oinc(3);
-	oinc.print();
+	Matrix m(3);
+	m.print();
+	
+	int k = 0;
+	while ( scanf("%d", &k) == 1 ) {
+		cout << k << endl;
+	}
 	// cout << "s " << zbr.getState() << endl;
 	// // initialize them
 	// while ( )
