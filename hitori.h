@@ -4,9 +4,13 @@
 class Cell
 {
 public:
-	Cell(int, int, int);
+	// public constructor
+	Cell(int a, int b, int c): x(a), y(b), state(c) {};
+	// public default constructor
 	Cell(): x(0), y(0), state(0) {};
+	// public copy constructor
 	Cell(const Cell&);
+	// public destructor
 	~Cell() {};
 	// virtual ~Cell();
 	

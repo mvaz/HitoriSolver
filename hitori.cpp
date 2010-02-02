@@ -10,12 +10,12 @@ using namespace std;
 
 
 //////////////////////////////////////////////////
-Cell::Cell(int x, int y, int state) {
-	cout << "normal constructor is being called" << endl;
-	this->x = x;
-	this->y = y;
-	this->state = state;
-}
+// Cell::Cell(int x, int y, int state) {
+// 	cout << "normal constructor is being called" << endl;
+// 	this->x = x;
+// 	this->y = y;
+// 	this->state = state;
+// }
 
 Cell::Cell(const Cell& c) {
 	this->x = c.x;
@@ -54,7 +54,7 @@ Matrix::Matrix(int n) {
 		// Cell x = oinc[i];
 			// this->data[i].print();
 	}
-	cout << "...." << endl;
+	// cout << "...." << endl;
 }
 
 void Matrix::print() {
