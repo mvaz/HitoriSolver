@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cstdlib>
 #include "hitori.h"
 
@@ -13,7 +12,12 @@ Cell::Cell(int x, int y, int state) {
 
 int Cell::getX() { return this->x; }
 int Cell::getY() { return this->y; }
-size_t Cell::getState() { return state; }
+int Cell::getState() { return state; }
+void Cell::print() {
+	cout << "x " << zbr.getX() << endl;
+	cout << "y " << zbr.getY() << endl;
+	cout << "state " << zbr.getState() << endl;
+}
 
 int main() {
 	

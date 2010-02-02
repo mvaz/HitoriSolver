@@ -1,4 +1,5 @@
 // #include <valarray>
+#include <iostream>
 
 
 class Cell
@@ -10,6 +11,8 @@ public:
 	int getX();
 	int getY();
 	int getState();
+	
+	void print();
 private:
 	int x, y, state;
 	
