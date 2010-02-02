@@ -7,6 +7,9 @@
 
 using namespace std;
 
+
+
+//////////////////////////////////////////////////
 Cell::Cell(int x, int y, int state) {
 	this->x = x;
 	this->y = y;
@@ -23,10 +26,11 @@ void Cell::print() {
 	     << "state: " << this->state << endl;
 }
 
-
+//////////////////////////////////////////////////
 Matrix::Matrix(size_t n) {
 	this->n = n;
 }
+
 
 
 
@@ -34,6 +38,8 @@ int main() {
 
 	Cell zbr( 1, 2, 3);
 	zbr.print();
+	
+	
 	// cout << "s " << zbr.getState() << endl;
 	// // initialize them
 	// while ( )
