@@ -5,6 +5,9 @@ class Cell
 {
 public:
 	Cell(int, int, int);
+	Cell(): x(0), y(0), state(0) {};
+	Cell(const Cell&);
+	~Cell() {};
 	// virtual ~Cell();
 	
 	int getX();
@@ -28,6 +31,6 @@ private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;
 	// std::valarray< Cell > data( Cell(0,0,0), 1);
-	std::valarray< int > data;
+	std::valarray< Cell > data;
 };
 

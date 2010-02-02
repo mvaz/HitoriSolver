@@ -11,9 +11,16 @@ using namespace std;
 
 //////////////////////////////////////////////////
 Cell::Cell(int x, int y, int state) {
+	cout << "normal constructor is being called" << endl;
 	this->x = x;
 	this->y = y;
 	this->state = state;
+}
+
+Cell::Cell(const Cell& c) {
+	this->x = c.x;
+	this->y = c.y;
+	this->state = c.state;
 }
 
 int Cell::getX() { return this->x; }
@@ -30,21 +37,30 @@ void Cell::print() {
 Matrix::Matrix(int n) {
 	this->n = n;
 	
-	
+	// valarray< Cell > oinc(n);
+	data.resize(n);
+	// this->data = oinc;
 	// valarray< int > data(n);
-	this->data = new valarray<int>(n);
+	// data = new valarray<int>(n);
 	// valarray<Cell> data(n);
 	
 	// for(size_t i = 0; i < this->n; ++i)
 	// {
 	// 	data[i] = 
 	// }
+	cout << "...." << endl;
+	for(size_t i = 1; i < this->n; ++i)
+	{
+		// Cell x = oinc[i];
+			// this->data[i].print();
+	}
+	cout << "...." << endl;
 }
 
 void Matrix::print() {
 	for(size_t i = 0; i < this->n; ++i)
 	{
-		cout << this->data[i] << endl;
+		this->data[i].print();
 	}
 }
 
