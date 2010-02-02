@@ -28,10 +28,6 @@ Matrix::Matrix(int n) {
 	// data = new valarray<int>(n);
 	// valarray<Cell> data(n);
 	
-	// for(size_t i = 0; i < this->n; ++i)
-	// {
-	// 	data[i] = 
-	// }
 	cout << "...." << endl;
 	for(size_t i = 1; i < this->n; ++i)
 	{
