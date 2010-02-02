@@ -1,6 +1,4 @@
-// #include <valarray>
-#include <iostream>
-#include <string>
+#include <valarray>
 
 
 class Cell
@@ -19,17 +17,14 @@ private:
 	
 };
 
-// 
-// class Matrix
-// {
-// public:
-// 	Matrix (size_t);
-// 	virtual ~Matrix ();
-// 
-// private:
-// 	/* data */
-// 	std::valarray<Cell> data;
-// 	
-// };
 
+class Matrix
+{
+public:
+	Matrix(size_t);
+	// ~Matrix();
+private:
+	size_t n;
+	std::valarray<Cell> data;
+};
 

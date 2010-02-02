@@ -1,4 +1,7 @@
 #include <cstdlib>
+#include <iostream>
+#include <string>
+
 #include "hitori.h"
 
 
@@ -20,11 +23,14 @@ void Cell::print() {
 	     << "state: " << this->state << endl;
 }
 
-int main() {
-	
-	// create the lists
-	// list<int> firstLine;
 
+Matrix::Matrix(size_t n) {
+	this->n = n;
+}
+
+
+
+int main() {
 
 	Cell zbr( 1, 2, 3);
 	zbr.print();
