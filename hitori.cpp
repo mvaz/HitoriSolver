@@ -27,9 +27,9 @@ void Action::print() {
 
 //////////////////////////////////////////////////
 Matrix::Matrix(int n) {
+	// 
 	this->n = n;
 	
-	// valarray< Cell > oinc(n);
 	data.resize(n);
 	// this->data = oinc;
 	// valarray< int > data(n);
@@ -39,10 +39,8 @@ Matrix::Matrix(int n) {
 	cout << "...." << endl;
 	for(size_t i = 1; i < this->n; ++i)
 	{
-		// Cell x = oinc[i];
-			// this->data[i].print();
+		// this->data[i].print();
 	}
-	// cout << "...." << endl;
 }
 
 void Matrix::print() {
