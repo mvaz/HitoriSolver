@@ -13,7 +13,7 @@ Cell::Cell(int x, int y, int state) {
 
 int Cell::getX() { return this->x; }
 int Cell::getY() { return this->y; }
-// size_t Cell::getState() { return state; }
+size_t Cell::getState() { return state; }
 
 int main() {
 	
