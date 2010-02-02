@@ -11,14 +11,6 @@ using namespace std;
 
 //////////////////////////////////////////////////
 
-// Cell::Cell(const Cell& c) {
-// 	this->number = c.x;
-// 	this->state = c.state;
-// }
-// 
-// int Cell::getX() { return this->x; }
-// int Cell::getY() { return this->y; }
-// int Cell::getState() { return state; }
 void Cell::print() {
 	string separator = ", ";
 	cout << "number: " << this->number << separator
