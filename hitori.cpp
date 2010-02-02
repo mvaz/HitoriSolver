@@ -14,9 +14,10 @@ int Cell::getX() { return this->x; }
 int Cell::getY() { return this->y; }
 int Cell::getState() { return state; }
 void Cell::print() {
-	cout << "x " << zbr.getX() << endl;
-	cout << "y " << zbr.getY() << endl;
-	cout << "state " << zbr.getState() << endl;
+	string separator = ", ";
+	cout << "x: " << this->x << separator
+	     << "y: " << this->y << separator
+	     << "state: " << this->state << endl;
 }
 
 int main() {
@@ -26,10 +27,7 @@ int main() {
 
 
 	Cell zbr( 1, 2, 3);
-	
-	cout << "created cell" << endl;
-	cout << "x " << zbr.getX() << endl;
-	cout << "y " << zbr.getY() << endl;
+	zbr.print();
 	// cout << "s " << zbr.getState() << endl;
 	// // initialize them
 	// while ( )

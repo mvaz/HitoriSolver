@@ -1,5 +1,6 @@
 // #include <valarray>
 #include <iostream>
+#include <string>
 
 
 class Cell
