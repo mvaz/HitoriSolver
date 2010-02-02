@@ -17,6 +17,14 @@ void Cell::print() {
 	     << "state: " << this->state << endl;
 }
 
+
+void Action::print() {
+	string separator = ", ";
+	cout << "x " << this->x << separator <<
+	        "y " << this->y << separator <<
+			"state " << this->state << endl;
+}
+
 //////////////////////////////////////////////////
 Matrix::Matrix(int n) {
 	this->n = n;
@@ -43,7 +51,6 @@ void Matrix::print() {
 		this->data[i].print();
 	}
 }
-
 
 
 int main() {

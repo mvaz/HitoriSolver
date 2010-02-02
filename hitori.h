@@ -31,7 +31,7 @@ public:
 	// public default constructor
 	Action(): x(0), y(0), state(0) {};
 	// public copy constructor
-	Action(const Action&);
+	Action(const Action& a): x(a.x), y(a.y), state(a.state) {};
 	// public destructor
 	~Action() {};
 	
