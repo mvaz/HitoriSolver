@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 #include "hitori.h"
@@ -53,16 +54,30 @@ void Matrix::print() {
 
 int main() {
 
-	Cell c( 1, 3);
-	c.print();
+	// Cell c( 1, 3);
+	// c.print();
+	// 
+	// Matrix m(3);
+	// m.print();
 	
-	Matrix m(3);
-	m.print();
+	// read first line and determine how many 
+	string s;
+	getline( cin, s );
 	
-	int k = 0;
-	while ( scanf("%d", &k) == 1 ) {
+	istringstream iss( s, istringstream::in);
+
+	int k = 0, n = 0;
+	while ( iss >> k) {
+		n++;
 		cout << k << endl;
 	}
+		
+
+	// 
+	// int k = 0;
+	// while ( scanf("%d", &k) == 1 ) {
+	// 	cout << k << endl;
+	// }
 	// cout << "s " << zbr.getState() << endl;
 	// // initialize them
 	// while ( )

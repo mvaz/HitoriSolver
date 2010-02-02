@@ -5,7 +5,7 @@ class Cell
 {
 public:
 	// public constructor
-	Cell(int a, int b): number(a), state(b) {};
+	Cell(int n, int s): number(n), state(s) {};
 	// public default constructor
 	Cell(): number(0), state(0) {};
 	// public copy constructor
