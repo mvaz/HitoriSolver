@@ -21,10 +21,13 @@ private:
 class Matrix
 {
 public:
-	Matrix(size_t);
+	Matrix(int);
 	// ~Matrix();
+	void print();
 private:
-	size_t n;
-	std::valarray<Cell> data;
+	int n;
+	// std::valarray< std::valarray<Cell> > data;
+	// std::valarray< Cell > data( Cell(0,0,0), 1);
+	std::valarray< int > data;
 };
 

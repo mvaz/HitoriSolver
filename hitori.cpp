@@ -27,10 +27,26 @@ void Cell::print() {
 }
 
 //////////////////////////////////////////////////
-Matrix::Matrix(size_t n) {
+Matrix::Matrix(int n) {
 	this->n = n;
+	
+	
+	// valarray< int > data(n);
+	this->data = new valarray<int>(n);
+	// valarray<Cell> data(n);
+	
+	// for(size_t i = 0; i < this->n; ++i)
+	// {
+	// 	data[i] = 
+	// }
 }
 
+void Matrix::print() {
+	for(size_t i = 0; i < this->n; ++i)
+	{
+		cout << this->data[i] << endl;
+	}
+}
 
 
 
@@ -39,7 +55,8 @@ int main() {
 	Cell zbr( 1, 2, 3);
 	zbr.print();
 	
-	
+	Matrix oinc(3);
+	oinc.print();
 	// cout << "s " << zbr.getState() << endl;
 	// // initialize them
 	// while ( )
