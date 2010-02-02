@@ -5,11 +5,11 @@ class Cell
 {
 public:
 	// public constructor
-	Cell(int number, int state): x(a), y(b), state(c) {};
+	Cell(int a, int b): number(a), state(b) {};
 	// public default constructor
 	Cell(): number(0), state(0) {};
 	// public copy constructor
-	Cell(const Cell&);
+	Cell(const Cell& c): number(c.number), state(c.state) {};
 	// public destructor
 	~Cell() {};
 	

@@ -11,19 +11,17 @@ using namespace std;
 
 //////////////////////////////////////////////////
 
-Cell::Cell(const Cell& c) {
-	this->x = c.x;
-	this->y = c.y;
-	this->state = c.state;
-}
-
-int Cell::getX() { return this->x; }
-int Cell::getY() { return this->y; }
-int Cell::getState() { return state; }
+// Cell::Cell(const Cell& c) {
+// 	this->number = c.x;
+// 	this->state = c.state;
+// }
+// 
+// int Cell::getX() { return this->x; }
+// int Cell::getY() { return this->y; }
+// int Cell::getState() { return state; }
 void Cell::print() {
 	string separator = ", ";
-	cout << "x: " << this->x << separator
-	     << "y: " << this->y << separator
+	cout << "number: " << this->number << separator
 	     << "state: " << this->state << endl;
 }
 
@@ -62,7 +60,7 @@ void Matrix::print() {
 
 int main() {
 
-	Cell zbr( 1, 2, 3);
+	Cell zbr( 1, 3);
 	zbr.print();
 	
 	Matrix oinc(3);
