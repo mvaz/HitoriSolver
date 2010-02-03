@@ -5,10 +5,7 @@
 
 #include "hitori.h"
 
-
 using namespace std;
-
-
 
 //////////////////////////////////////////////////
 
@@ -60,20 +57,27 @@ int main() {
 	// Matrix m(3);
 	// m.print();
 	
-	// read first line and determine how many 
+	// read first line and determine how many numbers there are
 	string s;
 	getline( cin, s );
-	
 	istringstream iss( s, istringstream::in);
-
-	int k = 0, n = 0;
+	int k = 0;
+	int n = 0;	
 	while ( iss >> k) {
 		n++;
 		cout << k << endl;
 	}
-		
-
-	// 
+	
+	// cin.seekg ( ios::beg );
+	for (size_t j = 1 ; j < n ; j++)
+	{
+		getline( cin, s );
+		istringstream iss( s, istringstream::in);
+		for( size_t i = 0; i < n ; i++) {
+			iss >> k;
+		}
+	}
+	
 	// int k = 0;
 	// while ( scanf("%d", &k) == 1 ) {
 	// 	cout << k << endl;
