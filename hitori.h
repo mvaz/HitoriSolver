@@ -51,6 +51,7 @@ public:
 	Matrix(int);
 	// ~Matrix();
 	void print();
+	void setValue(size_t, size_t, int value);
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;

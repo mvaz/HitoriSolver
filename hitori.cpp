@@ -15,7 +15,6 @@ void Cell::print() {
 	     << "state: " << this->state << endl;
 }
 
-
 void Action::print() {
 	string separator = ", ";
 	cout << "x " << this->x << separator <<
@@ -48,6 +47,13 @@ void Matrix::print() {
 	}
 }
 
+int Matrix::getValue(size_t x, size_t y) {
+	return 1;
+}
+
+void Matrix::setValue( size_t x, size_t y, int value) {
+	
+}
 
 int main() {
 
