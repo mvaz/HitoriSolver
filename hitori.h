@@ -15,6 +15,8 @@ public:
 	
 	int getNumber() const { return this->number; };
 	int getState() const { return this->state; };
+	int setState(int newState) { this->state = newState; }
+	int setNumber(int newNumber) { this->number = newNumber; }
 	
 	void print();
 private:
@@ -51,7 +53,10 @@ public:
 	Matrix(int);
 	// ~Matrix();
 	void print();
-	void setValue(size_t, size_t, int value);
+	void setNumber(size_t, size_t, int value);
+	void setState(size_t, size_t, int state);
+	int getNumber(size_t, size_t);
+	int getState(size_t, size_t);
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;
