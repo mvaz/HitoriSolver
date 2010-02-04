@@ -42,6 +42,11 @@ int Matrix::getState(size_t x, size_t y) {
 	return this->data[index].getState();
 }
 
+void Matrix::setState( size_t x, size_t y, int newState) {
+	size_t index = x * this->n + y;
+	this->data[index].setState(newState);
+}
+
 int Matrix::getNumber(size_t x, size_t y) {
 	size_t index = x * this->n + y;
 	return this->data[index].getNumber();
@@ -53,16 +58,11 @@ void Matrix::setNumber( size_t x, size_t y, int newValue) {
 }
 
 
-void Matrix::setState( size_t x, size_t y, int newState) {
-	size_t index = x * this->n + y;
-	this->data[index].setState(newState);
-}
-
+/*
+ * 
+ */
 int main() {
 
-	// Cell c( 1, 3);
-	// c.print();
-		
 	string s;
 	int n = 0;	
 	int k = 0;
@@ -74,7 +74,6 @@ int main() {
 
 	while ( iss >> k)
 		n++;
-
 	// initialize m
 	Matrix m( n );	
 
@@ -90,5 +89,5 @@ int main() {
 	} while ( (++j) < n );
 	
 	m.print();
-
+	
 }
