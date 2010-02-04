@@ -57,12 +57,8 @@ void Matrix::setNumber( size_t x, size_t y, int newValue) {
 	this->data[index].setNumber(newValue);
 }
 
-
-/*
- * 
- */
-int main() {
-
+static Matrix& Matrix::buildMatrixFromStdin() {
+	
 	string s;
 	int n = 0;	
 	int k = 0;
@@ -75,19 +71,29 @@ int main() {
 	while ( iss >> k)
 		n++;
 	// initialize m
-	Matrix m( n );	
+	Matrix &m = new Matrix( n );	
 
 	do {
 		istringstream iss( s, istringstream::in);
 		
 		for( size_t i = 0; i < n ; i++) {
 			iss >> k;
-			m.setNumber(j,i,k);
+			m->setNumber(j,i,k);
 		}
 		
 		getline( cin, s );
 	} while ( (++j) < n );
 	
-	m.print();
+	
+	return m;
+}
+/*
+ * 
+ */
+int main() {
+
+	Matrix x = buildMatrixFromStdin();
+	x.print();
+	
 	
 }

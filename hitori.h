@@ -37,6 +37,7 @@ public:
 	// public destructor
 	~Action() {};
 	
+	
 	int getX();
 	int getY();
 	int getState();
@@ -57,6 +58,8 @@ public:
 	void setState(size_t, size_t, int state);
 	int getNumber(size_t, size_t);
 	int getState(size_t, size_t);
+	
+	static Matrix& buildMatrixFromStdin();
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;
