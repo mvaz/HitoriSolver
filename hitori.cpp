@@ -75,6 +75,32 @@ void Matrix::setNumber( size_t x, size_t y, int newValue) {
 	this->data[index].setNumber(newValue);
 }
 
+
+bool Matrix::repeatedInColumn(size_t col, int value) {
+	size_t count = 0;
+	
+	assert( col < this->n );
+	
+	for(size_t i = 0; i < this->n; ++i)
+		if (this->getNumber(i, col))
+			count++;
+	
+	return count > 1;
+}
+
+bool Matrix::repeatedInRow( size_t row, int value) {
+	size_t count = 0;
+	
+	assert( row < this->n );
+	
+	for(size_t j = 0; j < this->n; ++j)
+		if (this->getNumber( row, j))
+			count++;
+	
+	return count > 1;
+	
+}
+
 // TODO: Check the functioning of the stream classes
 //  change the signature of the method, so that it gets an input stream
 Matrix *Matrix::buildMatrixFromStdin() {
@@ -115,6 +141,8 @@ int main() {
 	Matrix *x = Matrix::buildMatrixFromStdin();
 	x->print();
 	
+	cout << x->repeatedInRow(0,2) << endl;
+	cout << x->repeatedInColumn(0,2) << endl;
 	// solve the puzzle
 	
 }

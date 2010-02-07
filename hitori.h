@@ -67,6 +67,9 @@ public:
 	Cell::State getState(size_t, size_t);
 	
 	static Matrix *buildMatrixFromStdin();
+	
+	bool repeatedInColumn(size_t, int);
+	bool repeatedInRow( size_t, int);
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;
