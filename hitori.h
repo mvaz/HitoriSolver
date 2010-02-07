@@ -70,10 +70,21 @@ public:
 	
 	bool repeatedInColumn(size_t, int);
 	bool repeatedInRow( size_t, int);
+	
+	bool isValid();
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;
 	// std::valarray< Cell > data( Cell(0,0,0), 1);
 	std::valarray< Cell > data;
+	
+	// invariants
+	// 1. no two blacks side by side?
+	bool noTwoBlacksSideBySide();
+	// 2. in each row, column, only one of each number is marked white
+	bool noTwoWhitesInColumn();
+	bool noTwoWhitesInRwo();
+	bool pathBetweenEveryCell();
+	
 };
 
