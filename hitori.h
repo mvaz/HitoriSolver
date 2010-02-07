@@ -66,7 +66,7 @@ public:
 	int getNumber(size_t, size_t);
 	Cell::State getState(size_t, size_t);
 	
-	static Matrix *buildMatrixFromStdin();
+	static Matrix *newFromStream();
 	
 	bool repeatedInColumn(size_t, int);
 	bool repeatedInRow( size_t, int);

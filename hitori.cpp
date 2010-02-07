@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <iostream>
+#include <istream>
 #include <ostream>
 #include <sstream>
 #include <string>
@@ -103,7 +104,7 @@ bool Matrix::repeatedInRow( size_t row, int value) {
 
 // TODO: Check the functioning of the stream classes
 //  change the signature of the method, so that it gets an input stream
-Matrix *Matrix::buildMatrixFromStdin() {
+Matrix *Matrix::newFromStream(istream &ist) {
 	
 	string s;
 	int n = 0;	
@@ -138,11 +139,11 @@ Matrix *Matrix::buildMatrixFromStdin() {
  */
 int main() {
 
-	Matrix *x = Matrix::buildMatrixFromStdin();
-	x->print();
-	
-	cout << x->repeatedInRow(0,2) << endl;
-	cout << x->repeatedInColumn(0,2) << endl;
+	// Matrix *x = Matrix::newFromStream(cin);
+	// x->print();
+	// 
+	// cout << x->repeatedInRow(0,2) << endl;
+	// cout << x->repeatedInColumn(0,2) << endl;
 	// solve the puzzle
 	
 }
