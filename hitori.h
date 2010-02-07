@@ -1,4 +1,5 @@
 #include <valarray>
+#include <iostream>
 
 
 class Cell
@@ -21,11 +22,13 @@ public:
 	void setNumber(int newNumber) { this->number = newNumber; }
 	
 	void print();
+	
 private:
 	int number;
 	State state;
 	
 };
+
 
 
 class Action

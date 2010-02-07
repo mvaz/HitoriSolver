@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <iostream>
+#include <ostream>
 #include <sstream>
 #include <string>
 
@@ -8,6 +9,20 @@
 using namespace std;
 
 //////////////////////////////////////////////////
+
+ostream& operator<<(ostream& os, const Cell::State &d) {
+	switch(d) {
+		case Cell::none:
+			return os<<"none";
+		case Cell::black:
+			return os<<"black";
+		case Cell::white:
+			return os<<"white";
+		default:
+			return os<<"Unknown";
+	}
+}
+
 
 void Cell::print() {
 	string separator = ", ";
@@ -41,6 +56,9 @@ Cell::State Matrix::getState(size_t x, size_t y) {
 	size_t index = x * this->n + y;
 	return this->data[index].getState();
 }
+
+
+
 
 void Matrix::setState( size_t x, size_t y, Cell::State newState) {
 	size_t index = x * this->n + y;
