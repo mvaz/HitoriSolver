@@ -59,7 +59,7 @@ public:
 	int getNumber(size_t, size_t);
 	int getState(size_t, size_t);
 	
-	static Matrix& buildMatrixFromStdin();
+	static Matrix *buildMatrixFromStdin();
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;

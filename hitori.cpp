@@ -57,7 +57,9 @@ void Matrix::setNumber( size_t x, size_t y, int newValue) {
 	this->data[index].setNumber(newValue);
 }
 
-static Matrix& Matrix::buildMatrixFromStdin() {
+// TODO: Check the functioning of the stream classes
+//  change the signature of the method, so that it gets an input stream
+Matrix *Matrix::buildMatrixFromStdin() {
 	
 	string s;
 	int n = 0;	
@@ -71,7 +73,7 @@ static Matrix& Matrix::buildMatrixFromStdin() {
 	while ( iss >> k)
 		n++;
 	// initialize m
-	Matrix &m = new Matrix( n );	
+	Matrix *m = new Matrix( n );	
 
 	do {
 		istringstream iss( s, istringstream::in);
@@ -92,8 +94,8 @@ static Matrix& Matrix::buildMatrixFromStdin() {
  */
 int main() {
 
-	Matrix x = buildMatrixFromStdin();
-	x.print();
+	Matrix *x = Matrix::buildMatrixFromStdin();
+	x->print();
 	
 	
 }
