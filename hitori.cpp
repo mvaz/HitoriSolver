@@ -104,7 +104,7 @@ bool Matrix::repeatedInRow( size_t row, int value) {
 
 // TODO: Check the functioning of the stream classes
 //  change the signature of the method, so that it gets an input stream
-Matrix *Matrix::newFromStream(istream &ist) {
+static Matrix *Matrix::newFromStream(istream &ist) {
 	
 	string s;
 	int n = 0;	
