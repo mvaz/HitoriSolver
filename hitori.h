@@ -4,23 +4,26 @@
 class Cell
 {
 public:
+	enum State { none, black, white};
+	
 	// public constructor
-	Cell(int n, int s): number(n), state(s) {};
+	Cell(int n, State s): number(n), state(s) {};
 	// public default constructor
-	Cell(): number(0), state(0) {};
+	Cell(): number(0), state(none) {};
 	// public copy constructor
 	Cell(const Cell& c): number(c.number), state(c.state) {};
 	// public destructor
 	~Cell() {};
 	
 	int getNumber() const { return this->number; };
-	int getState() const { return this->state; };
-	int setState(int newState) { this->state = newState; }
-	int setNumber(int newNumber) { this->number = newNumber; }
+	State getState() const { return this->state; };
+	void setState(State newState) { this->state = newState; }
+	void setNumber(int newNumber) { this->number = newNumber; }
 	
 	void print();
 private:
-	int number, state;
+	int number;
+	State state;
 	
 };
 
@@ -55,9 +58,9 @@ public:
 	// ~Matrix();
 	void print();
 	void setNumber(size_t, size_t, int value);
-	void setState(size_t, size_t, int state);
+	void setState(size_t, size_t, Cell::State state);
 	int getNumber(size_t, size_t);
-	int getState(size_t, size_t);
+	Cell::State getState(size_t, size_t);
 	
 	static Matrix *buildMatrixFromStdin();
 private:

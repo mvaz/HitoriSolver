@@ -37,12 +37,12 @@ void Matrix::print() {
 		this->data[i].print();
 }
 
-int Matrix::getState(size_t x, size_t y) {
+Cell::State Matrix::getState(size_t x, size_t y) {
 	size_t index = x * this->n + y;
 	return this->data[index].getState();
 }
 
-void Matrix::setState( size_t x, size_t y, int newState) {
+void Matrix::setState( size_t x, size_t y, Cell::State newState) {
 	size_t index = x * this->n + y;
 	this->data[index].setState(newState);
 }
@@ -97,5 +97,6 @@ int main() {
 	Matrix *x = Matrix::buildMatrixFromStdin();
 	x->print();
 	
+	// solve the puzzle
 	
 }
