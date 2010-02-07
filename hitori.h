@@ -32,9 +32,9 @@ class Action
 {
 public:
 	// public constructor
-	Action(int a, int b, int c): x(a), y(b), state(c) {};
+	Action(int a, int b, Cell::State s): x(a), y(b), state(s) {};
 	// public default constructor
-	Action(): x(0), y(0), state(0) {};
+	Action(): x(0), y(0), state(Cell::none) {};
 	// public copy constructor
 	Action(const Action& a): x(a.x), y(a.y), state(a.state) {};
 	// public destructor
@@ -47,7 +47,8 @@ public:
 	
 	void print();
 private:
-	int x, y, state;
+	int x, y;
+	Cell::State state;
 	
 };
 
