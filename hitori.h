@@ -82,9 +82,9 @@ private:
 	// 1. no two blacks side by side?
 	bool noTwoBlacksSideBySide();
 	// 2. in each row, column, only one of each number is marked white
-	bool noTwoWhitesInColumn();
-	bool noTwoWhitesInRwo();
-	bool pathBetweenEveryCell();
+	bool noTwoWhitesInColumn(size_t);
+	bool noTwoWhitesInRwo(size_t);
+	bool pathBetweenEveryCell(size_t);
 	
 };
 
