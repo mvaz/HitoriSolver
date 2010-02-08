@@ -1,5 +1,5 @@
 #include <valarray>
-#include <iostream>
+#include <iosfwd>
 
 
 class Cell
@@ -66,12 +66,13 @@ public:
 	int getNumber(size_t, size_t);
 	Cell::State getState(size_t, size_t);
 	
-	static Matrix *newFromStream(istream&);
-	
 	bool repeatedInColumn(size_t, int);
 	bool repeatedInRow( size_t, int);
 	
 	bool isValid();
+	
+	static Matrix newFromStream(std::istream&);
+	
 private:
 	int n;
 	// std::valarray< std::valarray<Cell> > data;

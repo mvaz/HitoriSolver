@@ -104,7 +104,7 @@ bool Matrix::repeatedInRow( size_t row, int value) {
 
 // TODO: Check the functioning of the stream classes
 //  change the signature of the method, so that it gets an input stream
-static Matrix *Matrix::newFromStream(istream &ist) {
+Matrix Matrix::newFromStream(std::istream &ist) {
 	
 	string s;
 	int n = 0;	
@@ -112,23 +112,23 @@ static Matrix *Matrix::newFromStream(istream &ist) {
 	int j = 0;
 	
 	// read first line and determine how many numbers there are
-	getline( cin, s );
+	getline( ist, s );
 	istringstream iss( s, istringstream::in);
 
 	while ( iss >> k)
 		n++;
 	// initialize m
-	Matrix *m = new Matrix( n );	
+	Matrix m( n );	
 
 	do {
 		istringstream iss( s, istringstream::in);
 		
 		for( size_t i = 0; i < n ; i++) {
 			iss >> k;
-			m->setNumber(j,i,k);
+			m.setNumber(j,i,k);
 		}
 		
-		getline( cin, s );
+		getline( ist, s );
 	} while ( (++j) < n );
 	
 	
@@ -140,6 +140,8 @@ static Matrix *Matrix::newFromStream(istream &ist) {
 int main() {
 
 	// Matrix *x = Matrix::newFromStream(cin);
+	Matrix m = Matrix::newFromStream(cin);
+	m.print();
 	// x->print();
 	// 
 	// cout << x->repeatedInRow(0,2) << endl;
